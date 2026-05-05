@@ -1,0 +1,56 @@
+\section{Introduction}
+\label{sec:intro}
+
+%==========================================================================
+% PÁRRAFO 1: Paradigma clásico
+%==========================================================================
+The contemporary understanding of sensory processing in the visual system is founded upon the seminal findings of Hubel and Wiesel (1962, 1968). Under this classical paradigm, the visual cortex is organized as a hierarchy of filters where neurons extract progressively complex features of the visual scene through stage-by-stage processing. Central to this conception is the classical receptive field (CRF), operationally defined as the specific region of visual space where the presence of a light stimulus can evoke a direct neuronal response, significantly influencing its firing rate. In this traditional model, processing has historically been interpreted as a predominantly local phenomenon, where the response of each functional unit is determined almost exclusively by the physical properties of the stimulus located within its defined spatial boundaries.
+
+%==========================================================================
+% PÁRRAFO 2: eCRF y surround suppression
+%==========================================================================
+However, the strictly local view of neuronal processing has been challenged by the discovery of extra-classical receptive field (eCRF) effects. Research has shown that sensory responses are not only determined by stimuli within the CRF but are also significantly modulated by contextual information from the surrounding visual field \citep{Allman1985}. The most prominent of these effects is surround suppression, a non-linear phenomenon where the expansion of a stimulus beyond the CRF limits leads to a substantial decrease in firing rates. This contextual modulation implies a high level of global integration, indicating that the primary visual cortex operates as more than a set of isolated local filters. Such findings suggest that the functional architecture of the visual system must incorporate mechanisms capable of integrating information across disparate spatial locations, a requirement that traditional, purely local hierarchical models fail to satisfy \citep{Angelucci2003}.
+
+%==========================================================================
+% PÁRRAFO 3: Mecanismos propuestos
+%==========================================================================
+The mechanistic origin of surround suppression remains a central controversy in visual neuroscience. Traditionally, long-range horizontal connections within V1 were proposed as the primary substrate for eCRF effects. However, accumulating evidence suggests that these lateral pathways are physiologically limited by their slow axonal conduction velocities and restricted spatial reach, which fail to account for the rapid and long-range nature of contextual modulation \citep{Bair2005,Schwabe2006}. This has led to the prevailing hypothesis that feedback projections from higher-order areas, such as V2, play a decisive role in integrating global information. Top-down signals provide the necessary spatial extent and speed to modulate V1 activity effectively \citep{Angelucci2017}. Reconciling how the laminar microcircuitry reconciles these local lateral and global feedback inputs is essential for a complete model of visual integration.
+
+%==========================================================================
+% PÁRRAFO 4: Gap computacional
+%==========================================================================
+Despite significant advances in developing biologically plausible cortical microcircuits, such as the canonical \citet{Potjans2014} model, a substantial gap remains between theoretical predictions and experimental observations of eCRF effects. Most existing computational models fail to quantitatively replicate the magnitude of surround suppression observed physiologically, which can reach a reduction of approximately 75\% in neuronal firing rates. This limitation often stems from feedback implementations that are either linear or excessively simplified, thereby failing to capture the intrinsic competitive dynamics of the visual hierarchy. Consequently, there is a critical need for large-scale spiking neural network models that respect laminar architecture to elucidate how inter-areal interactions give rise to robust contextual modulations.
+
+%==========================================================================
+% PÁRRAFO 5: Nuestra hipótesis y abordaje
+%==========================================================================
+In this study, we propose that robust surround suppression is not merely a byproduct of hierarchical feedback but an emergent property of competitive dynamics within the visual system. Utilizing the NEST simulator, we implemented a large-scale spiking neural network model based on the canonical cortical microcircuit to examine how inter-areal interactions configure eCRF effects. Our central hypothesis holds that lateral competition within higher-order areas, specifically V2, is the essential mechanism for regulating top-down modulation and reaching the suppression levels observed experimentally. By comparing various architectural configurations, this work demonstrates that the integration of inter-areal competition is the critical missing piece for replicating the complex non-linear dynamics of the primary visual cortex.
+
+%==========================================================================
+% TODO: PÁRRAFO NUEVO 6 - Conexión con conceptos de Machine Learning
+%==========================================================================
+% [AQUÍ FALTA: Conectar hallazgo neurocientífico con conceptos que la
+% audiencia de NeurIPS reconoce inmediatamente. Mencionar explícitamente:
+%   - Divisive normalization (Carandini & Heeger, 2012)
+%   - Predictive coding / hierarchical inference (Rao & Ballard, 1999)
+%   - Winner-take-all como mecanismo de "explaining away"
+%   - Relación con atención selectiva y sparse coding
+%
+Beyond its neurobiological significance, the mechanism we investigate ---hierarchical lateral inhibition gating top-down feedback--- implements a canonical computational primitive: divisive normalization across hierarchical levels. This operation, widely studied in both biological vision \citep{Carandini2012} and deep learning \citep{...}, allows neural systems to encode relative rather than absolute stimulus magnitudes, a property essential for robust perception under varying conditions. From a theoretical standpoint, the winner-take-all dynamics we explore are closely related to predictive coding frameworks \citep{Rao1999}, where higher-level representations suppress lower-level activity corresponding to explained or redundant features --- a process known as \textit{explaining away}. Understanding how this computation arises from biologically plausible microcircuits can inform the design of artificial neural architectures that require context-dependent normalization, such as attention mechanisms \citep{...} and contrastive learning objectives \citep{...}.
+
+%==========================================================================
+% TODO: PÁRRAFO NUEVO 7 - Resumen de contribuciones
+%==========================================================================
+% [AQUÍ FALTA: Una lista explícita de contribuciones. En NeurIPS es esperado.
+%
+Our main contributions are as follows. First, we systematically compare three hierarchical architectures of large-scale spiking cortical microcircuits, isolating the specific role of lateral inhibition in V2 for extra-classical surround suppression. Second, we demonstrate that lateral competition within V2 is \emph{necessary} to achieve the $\sim$75\% suppression index consistently reported in primate V1 in vivo; architectures relying solely on V1 lateral connections or non-competitive V2 feedback both fail to replicate this magnitude. Third, we show that this hierarchical winner-take-all mechanism enables the network to dynamically encode relative stimulus strength even when absolute input remains constant, revealing a computational principle directly transferable to artificial perception systems that require context-dependent normalization. Finally, we validate the translational relevance of the architecture by reproducing schizophrenia-linked electrophysiological biomarkers --- specifically, gamma-band oscillation disruption and E/I imbalance signatures --- through targeted perturbation of inhibitory connectivity, establishing the model as an \emph{in silico} platform for computational psychiatry.
+
+%==========================================================================
+% PÁRRAFO 8: Implicancias clínicas (REUBICAR O RESUMIR)
+%==========================================================================
+% [NOTA: Este párrafo puede ir aquí, después de las  contribuciones, o moverse 
+% al final de la introducción como una mención breve que luego se desarrolla 
+% en Results y Discussion. Si el espacio es limitado, considerar acortarlo a 
+% 2-3 oraciones y dejar el desarrollo completo para la sección de Results (E/I y gamma).]
+%
+Beyond its fundamental importance for sensory integration, the characterization of these cortical mechanisms holds significant implications for the emerging field of computational psychiatry. The delicate balance between excitation and inhibition (E/I balance) that governs eCRF effects is also a critical determinant of healthy cognitive function. Disruptions in this equilibrium are hallmark features of several neuropsychiatric disorders, most notably schizophrenia, where patients often exhibit specific deficits in both surround suppression and gamma-band oscillations \citep{Uhlhaas2015}. By providing a platform to systematically manipulate circuit-level parameters, our model allows for the simulation of these pathological endophenotypes. This approach not only validates the biological relevance of our hierarchical competitive framework but also offers a bridge between large-scale circuit dynamics and the search for objective biomarkers in clinical neuroscience.
