@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.7)  5 MAY 2026 14:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.7)  5 MAY 2026 16:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -329,30 +329,43 @@ LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
 )
 \@LN@amsmath@ams@eqpen=\count324
- (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+ (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+)
+\Gin@req@height=\dimen189
+\Gin@req@width=\dimen190
+) (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count325
 ) (./neurips_2026.aux)
 \openout1 = `neurips_2026.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -420,18 +433,18 @@ LaTeX Font Info:    ... okay on input line 105.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 105.
+Package hyperref Info: Link coloring OFF on input line 106.
 (./neurips_2026.out) (./neurips_2026.out)
 \@outlinefile=\write3
 \openout3 = `neurips_2026.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 105.
-Package microtype Info: Applying patch `item' on input line 105.
-Package microtype Info: Applying patch `toc' on input line 105.
-Package microtype Info: Applying patch `eqnum' on input line 105.
-Package microtype Info: Applying patch `footnote' on input line 105.
-Package microtype Info: Applying patch `verbatim' on input line 105.
-LaTeX Info: Redefining \microtypesetup on input line 105.
+LaTeX Info: Redefining \microtypecontext on input line 106.
+Package microtype Info: Applying patch `item' on input line 106.
+Package microtype Info: Applying patch `toc' on input line 106.
+Package microtype Info: Applying patch `eqnum' on input line 106.
+Package microtype Info: Applying patch `footnote' on input line 106.
+Package microtype Info: Applying patch `verbatim' on input line 106.
+LaTeX Info: Redefining \microtypesetup on input line 106.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -447,26 +460,31 @@ File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 ) (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count326
-\scratchdimen=\dimen189
+\scratchdimen=\dimen191
 \scratchbox=\box57
 \nofMPsegments=\count327
 \nofMParguments=\count328
 \everyMPshowfont=\toks31
 \MPscratchCnt=\count329
-\MPscratchDim=\dimen190
+\MPscratchDim=\dimen192
 \MPnumerator=\count330
 \makeMPintoPDFobject=\count331
 \everyMPtoPDFconversion=\toks32
-) (/usr/share/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+)) (/usr/share/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 109.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 110.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 109.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 110.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/share/texmf-dist/tex/latex/microtype/mt-msb.cfg
@@ -476,7 +494,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 119.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 120.
  (/usr/share/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
@@ -596,24 +614,24 @@ Package natbib Warning: Citation `Potjans2014' on page 5 undefined on input line
 
 LaTeX Warning: Reference `tab:connectivity' on page 5 undefined on input line 101.
 
-
-LaTeX Warning: Reference `fig:architectures' on page 5 undefined on input line 138.
-
 [5]
+<img/architectures.pdf, id=187, 1625.07124pt x 579.16376pt>
+File: img/architectures.pdf Graphic file (type pdf)
+<use img/architectures.pdf>
+Package pdftex.def Info: img/architectures.pdf  used on input line 169.
+(pdftex.def)             Requested size: 397.48499pt x 141.65334pt.
 
-LaTeX Warning: Reference `fig:architectures' on page 6 undefined on input line 165.
 
+Package natbib Warning: Citation `Telenczuk2020' on page 6 undefined on input line 238.
 
-Package natbib Warning: Citation `Telenczuk2020' on page 6 undefined on input line 226.
-
-) (./sections/4 results.tex [6]
+[6 <./img/architectures.pdf>]) (./sections/4 results.tex
 
 LaTeX Warning: Reference `fig:crf_validation' on page 7 undefined on input line 53.
 
-
-LaTeX Warning: Reference `fig:architecture_comparison' on page 7 undefined on input line 100.
-
 [7]
+
+LaTeX Warning: Reference `fig:architecture_comparison' on page 8 undefined on input line 100.
+
 
 Package natbib Warning: Citation `Busse2009' on page 8 undefined on input line 149.
 
@@ -629,31 +647,31 @@ Overfull \hbox (1.0317pt too wide) in paragraph at lines 186--197
  []
 
 
-LaTeX Warning: Reference `fig:ei_gamma' on page 8 undefined on input line 239.
-
-
-Package natbib Warning: Citation `Uhlhaas2015' on page 8 undefined on input line 245.
-
-) (./sections/5 discussion.tex
-Underfull \vbox (badness 2393) has occurred while \output is active []
+Underfull \vbox (badness 1565) has occurred while \output is active []
 
  [8]
 
-Package natbib Warning: Citation `Vaswani2017' on page 9 undefined on input line 87.
+LaTeX Warning: Reference `fig:ei_gamma' on page 9 undefined on input line 239.
 
 
-Package natbib Warning: Citation `Hu2018' on page 9 undefined on input line 93.
+Package natbib Warning: Citation `Uhlhaas2015' on page 9 undefined on input line 245.
+
+) (./sections/5 discussion.tex [9]
+
+Package natbib Warning: Citation `Vaswani2017' on page 10 undefined on input line 87.
 
 
-Package natbib Warning: Citation `Oord2018' on page 9 undefined on input line 102.
+Package natbib Warning: Citation `Hu2018' on page 10 undefined on input line 93.
 
 
-Package natbib Warning: Citation `Chen2020' on page 9 undefined on input line 102.
+Package natbib Warning: Citation `Oord2018' on page 10 undefined on input line 102.
 
 
-Package natbib Warning: Citation `Davies2018' on page 9 undefined on input line 105.
+Package natbib Warning: Citation `Chen2020' on page 10 undefined on input line 102.
 
-[9]
+
+Package natbib Warning: Citation `Davies2018' on page 10 undefined on input line 105.
+
 
 Package natbib Warning: Citation `Carandini2012' on page 10 undefined on input line 113.
 
@@ -666,15 +684,12 @@ Package natbib Warning: Citation `Furber2014' on page 10 undefined on input line
 
 Package natbib Warning: Citation `Neftci2019' on page 10 undefined on input line 122.
 
-)
-Underfull \vbox (badness 3209) has occurred while \output is active []
-
- [10] [11]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 163.
+[10]) [11]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 164.
  (/usr/share/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [12] [13] [14]
-Underfull \hbox (badness 3579) in paragraph at lines 367--368
+Underfull \hbox (badness 3579) in paragraph at lines 368--369
 \T1/cmtt/m/n/10 503 / why-[]is-[]preferable-[]to$[] \T1/ptm/m/n/10 (+20) and []$\T1/cmtt/m/n/10 https : / / tex . stackexchange . com / questions / 40492 /
  []
 
@@ -695,18 +710,18 @@ Package rerunfilecheck Info: File `neurips_2026.out' has not changed.
 (rerunfilecheck)             Checksum: C4E6D70CEBE49CA90645CED1A33AAB60;7331.
  ) 
 Here is how much of TeX's memory you used:
- 13664 strings out of 469515
- 208902 string characters out of 5470808
- 670109 words of memory out of 5000000
- 41700 multiletter control sequences out of 15000+600000
+ 14037 strings out of 469515
+ 215137 string characters out of 5470808
+ 675886 words of memory out of 5000000
+ 42053 multiletter control sequences out of 15000+600000
  690926 words of font info for 296 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  72i,9n,79p,1434b,766s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on neurips_2026.pdf (23 pages, 254867 bytes).
+Output written on neurips_2026.pdf (23 pages, 283077 bytes).
 PDF statistics:
- 402 PDF objects out of 1000 (max. 8388607)
- 347 compressed objects within 4 object streams
- 93 named destinations out of 1000 (max. 500000)
- 69409 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 459 PDF objects out of 1000 (max. 8388607)
+ 386 compressed objects within 4 object streams
+ 94 named destinations out of 1000 (max. 500000)
+ 69414 words of extra memory for PDF output out of 74296 (max. 10000000)
 
