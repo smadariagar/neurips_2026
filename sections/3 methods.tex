@@ -38,7 +38,7 @@ where $w$ is the synaptic weight and $\tau_{\text{syn}}$ is the synaptic time co
 %==========================================================================
 \textbf{3.2 Laminar Microcircuit Architecture.} Each V1 module represents a $1$ mm$^2$ patch of cortical tissue, based on the full-scale canonical microcircuit model proposed by \citet{Potjans2014}. It comprises approximately $77{,}000$ neurons distributed across four laminar layers: L2/3, L4, L5, and L6. Within each layer, the network maintains a physiological ratio of excitatory to inhibitory neurons of approximately 80/20. Local recurrent connectivity follows empirically derived connection probabilities.
 
-To capture intra-areal spatial integration, long-range horizontal projections within V1 are incorporated. These lateral connections are restricted to the superficial L2/3 layer and are functionally segregated by distance. Nearby connections link functionally similar adjacent columns with both excitatory and inhibitory synapses, with transmission delays of $d_{\text{n.lat}} = 5 \pm 1.5$ ms. Distant connections, in contrast, link columns with disparate orientation preferences and operate via a predominantly suppressive mechanism through disynaptic inhibition, with a slower conduction delay of $d_{\text{d.lat}} = 8 \pm 2.5$ ms.
+To capture intra-areal spatial integration, long-range horizontal projections within V1 are incorporated. These lateral connections are restricted to the superficial L2/3 layer and are functionally segregated by distance. Nearby connections link functionally similar adjacent columns with both excitatory and inhibitory synapses, with transmission delays of $d_{\text{n.lat}} = 5 \pm 1.5$ ms. Distant connections, in contrast, link columns with disparate orientation preferences and operate via a predominantly suppressive mechanism through disynaptic inhibition, with a slower conduction delay of $d_{\text{d.lat}} = 8 \pm 2.5$ ms \textbf{(see Figure~\ref{fig:architectures}A)}.
 
 %==========================================================================
 % TODO: TABLA DE CONEXIONES O FIGURA DEL MICROCIRCUITO
@@ -50,24 +50,17 @@ To capture intra-areal spatial integration, long-range horizontal projections wi
 %
 \commentcd{Aca se habla del apéndice }The complete connection probability matrix between the eight neuronal populations (four layers $\times$ two types) follows the values reported by \citet{Potjans2014} and is provided in Table~\ref{tab:connectivity} of the Appendix.
 
-\begin{figure}[t]
-  \centering
-  \includegraphics[width=\textwidth]{img/architectures.pdf}
-  \caption{%
-    \textbf{Architectural configurations compared in this study.}
-    \textbf{(A)} Connections of the canonical V1 circuit.
-    \textbf{(B)} Overall architecture of the near and distant lateral connections, and the feedforward and feedback connections between V1 and V2.
-    \textbf{(C)} Configuration~1: V1 microcolumns with lateral intra-areal connections only.
-    \textbf{(D)} Configuration~2: V1-V2 hierarchy with a single V2 module providing non-specific feedback.
-    \textbf{(E)} Configuration~3: V1-V2 hierarchy with two V2 modules interconnected via reciprocal lateral inhibitory connections, implementing hierarchical winner-take-all competition.
-  }
-  \label{fig:architectures}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{img/architectures.pdf}
+    \caption{\textbf{Canonical Microcircuit and Hierarchical Architecture.} (Left) Local and intra-areal connectivity of the V1 microcircuit, detailing the specific interlaminar excitatory (E) and inhibitory (I) projections. (Right) Inter-areal feedforward and feedback connectivity between V1 and V2, along with near and distant lateral connections within V1.}
+    \label{fig:architectures}
 \end{figure}
 
 %==========================================================================
 % \subsection{Hierarchical Integration and Competitive Dynamics}
 %==========================================================================
-\textbf{3.3 Hierarchical Integration and Competitive Dynamics.} To investigate the mechanistic origins of eCRF effects, the baseline architecture was extended to include a higher-order visual area (V2). The V2 module mirrors the cytoarchitectural variations in laminar thickness and neuronal densities reported for the macaque V2 region. Inter-areal communication is mediated by topographic projections with fast transmission delays of $2 \pm 0.5$ ms. Feedforward pathways originate from the superficial layers L2/3 of V1 and terminate predominantly in L4 and L6 of V2. Feedback projections originate from the deep layers L5 and L6 of V2 and target the superficial L2/3 and infragranular L5 of V1, anatomically avoiding L4 to provide modulatory rather than driving input.
+\textbf{3.3 Hierarchical Integration and Competitive Dynamics.} To investigate the mechanistic origins of eCRF effects, the baseline architecture was extended to include a higher-order visual area (V2). The V2 module mirrors the cytoarchitectural variations in laminar thickness and neuronal densities reported for the macaque V2 region. Inter-areal communication is mediated by topographic projections with fast transmission delays of $2 \pm 0.5$ ms. Feedforward pathways originate from the superficial layers L2/3 of V1 and terminate predominantly in L4 and L6 of V2. Feedback projections originate from the deep layers L5 and L6 of V2 and target the superficial L2/3 and infragranular L5 of V1, anatomically avoiding L4 to provide modulatory rather than driving input \textbf{(see Figure~\ref{fig:architectures}B)}.
 
 To test the hypothesis that eCRF phenomena emerge from inter-areal interactions rather than purely local filtering, we embedded a lateral competition mechanism within the V2 module. This architecture comprises two spatially distinct, feature-aligned V2 modules that engage in competition via strong, reciprocal inhibitory connections. This hierarchical winner-take-all dynamic non-linearly refines the top-down feedback signals before they modulate V1 activity, overcoming the limitations of linear feedback models and enabling the robust, stimulus-specific surround suppression observed in physiological recordings.
 
@@ -80,30 +73,9 @@ To test the hypothesis that eCRF phenomena emerge from inter-areal interactions 
 To isolate the contribution of each circuit component, we systematically compared three architectural configurations (see Figure~\ref{fig:architectures}). \textbf{(1) V1 lateral only:} Four V1 microcolumns arranged in a ring, interconnected exclusively via horizontal connections within L2/3. No V2 modules are present. \textbf{(2) V1 + linear V2 feedback:} The V1 columns project feedforward to a single V2 module, which pools inputs from all columns and returns non-specific feedback to V1. This configuration implements hierarchical feedback without lateral competition. \textbf{(3) V1 + competitive V2 feedback:} The V1 columns project feedforward to two V2 modules, each aligned to a specific orientation column. The two V2 modules are interconnected via strong, reciprocal inhibitory synapses, implementing a winner-take-all competition. All other parameters, including neuron counts, local connectivity, and stimulation protocols, were held constant across configurations to ensure that differences in suppression magnitude can be attributed exclusively to the architectural manipulation.
 
 %==========================================================================
-% TODO: FIGURA DE LAS TRES ARQUITECTURAS
-%==========================================================================
-% [AQUÍ FALTA: Referencia a una figura esquemática mostrando las tres
-% configuraciones lado a lado. Esto es crítico para NeurIPS.
-%
-
-\begin{figure}[t]
-  \centering
-  \includegraphics[width=\textwidth]{img/protocol.pdf}
-  \caption{%
-    \textbf{Architectural configurations compared in this study.}
-    \textbf{(A)} Connections of the canonical V1 circuit.
-    \textbf{(B)} Overall architecture of the near and distant lateral connections, and the feedforward and feedback connections between V1 and V2.
-    \textbf{(C)} Configuration~1: V1 microcolumns with lateral intra-areal connections only.
-    \textbf{(D)} Configuration~2: V1-V2 hierarchy with a single V2 module providing non-specific feedback.
-    \textbf{(E)} Configuration~3: V1-V2 hierarchy with two V2 modules interconnected via reciprocal lateral inhibitory connections, implementing hierarchical winner-take-all competition.
-  }
-  \label{fig:architectures}
-\end{figure}
-
-%==========================================================================
 % \subsection{Sensory Stimulation Protocols}
 %==========================================================================
-\textbf{3.4 Sensory Stimulation Protocols.} Bottom-up sensory stimulation was emulated via thalamocortical afferents originating from the lateral geniculate nucleus (LGN), projecting primarily to layers L4 and L6 of V1. Thalamic inputs were modeled as Poisson spike trains. To simulate the classical receptive field response, the thalamic firing rate directed at the central microcolumn was increased to $20$ Hz after a $500$ ms baseline period. To evaluate extra-classical modulation, a peripheral contextual stimulus was applied to a distant column at $1000$ ms. The intensity of this peripheral stimulus was systematically varied across three levels: $10$, $20$, and $30$ Hz.
+\textbf{3.4 Sensory Stimulation Protocols.} Bottom-up sensory stimulation was emulated via thalamocortical afferents originating from the lateral geniculate nucleus (LGN), projecting primarily to layers L4 and L6 of V1. Thalamic inputs were modeled as Poisson spike trains. To simulate the classical receptive field response, the thalamic firing rate directed at the central microcolumn was increased to $20$ Hz after a $500$ ms baseline period. To evaluate extra-classical modulation, a peripheral contextual stimulus was applied to a distant column at $1000$ ms. The intensity of this peripheral stimulus was systematically varied across three levels: $10$, $20$, and $30$ Hz (Figure \ref{fig:protocol}).
 
 %==========================================================================
 % TODO: DEFINICIÓN FORMAL DEL SUPPRESSION INDEX
@@ -116,6 +88,13 @@ To quantify the strength of surround suppression, we define the suppression inde
   \text{SI} = 1 - \frac{R_{\text{center+surround}}}{R_{\text{center}}},
 \end{equation}
 where $R_{\text{center}}$ is the mean firing rate of the central column during classical receptive field stimulation alone, and $R_{\text{center+surround}}$ is the mean firing rate during concurrent center and peripheral stimulation. An SI of $1$ indicates complete suppression, and an SI of $0$ indicates no contextual modulation.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{img/protocol.pdf}
+    \caption{\textbf{Stimulation Protocols and Network Configurations.} Schematic representation of the classical receptive field (CRF) and extra-classical receptive field (eCRF) paradigms across the three evaluated architectures. The bottom panels illustrate the thalamic stimulation over time and the corresponding peri-stimulus time histograms (PSTH) for Layer 2/3 neurons in V1, highlighting the varying degrees of surround suppression.}
+    \label{fig:protocol}
+\end{figure}
 
 %==========================================================================
 % \subsection{Data Analysis and Local Field Potentials}

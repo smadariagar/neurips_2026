@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex neurips_2026"] 1778149037.51784 "neurips_2026.aux" "neurips_2026.bbl" "neurips_2026" 1778149038.1824 0
+["bibtex neurips_2026"] 1778151547.0079 "neurips_2026.aux" "neurips_2026.bbl" "neurips_2026" 1778151547.67976 0
   "./references.bib" 1778149036.67842 17420 af8737fb8b3c8194d0d36b5d0ed244d6 ""
   "/usr/share/texmf-dist/bibtex/bst/natbib/unsrtnat.bst" 1775415801 24550 a41a6405f4de768c43e871d9fbce2bc8 ""
-  "neurips_2026.aux" 1778149038.05872 12670 8cc7a96c161cca0324f67cd15a46f8c9 "pdflatex"
+  "neurips_2026.aux" 1778151547.54491 14149 521015bd4af42eb87bba41e672d2c913 "pdflatex"
   (generated)
   "neurips_2026.bbl"
   "neurips_2026.blg"
   (rewritten before read)
-["pdflatex"] 1778149037.56421 "/home/samuel/Documentos/PostDoc/conferences & articles/2026 NEURIPS/neurips_2026.tex" "neurips_2026.pdf" "neurips_2026" 1778149038.18254 0
+["pdflatex"] 1778151547.0515 "/home/samuel/Documentos/PostDoc/conferences & articles/2026 NEURIPS/neurips_2026.tex" "neurips_2026.pdf" "neurips_2026" 1778151547.67993 0
   "/home/samuel/Documentos/PostDoc/conferences & articles/2026 NEURIPS/neurips_2026.tex" 1778142443.32062 23259 a71bb3b81073480b4b71703995bc2fc8 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1775415801 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1775415801 2971 def0b6c1f0b107b3b936def894055589 ""
@@ -30,12 +30,18 @@
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1775415801 908 2921f8a10601f252058503cc6570e581 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1775415801 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1775415801 940 228d6584342e91276bf566bcf9716b83 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1775415801 1328 c834bbb027764024c09d3d2bf908b5f0 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm" 1775415801 1332 f817c21a1ba54560425663374f1b651a ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm" 1775415801 1344 8a0be4fe4d376203000810ad4dc81558 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm" 1775415801 1336 3125ccb448c1a09074e3aa4a9832f130 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm" 1775415801 1332 1fde11373e221473104d6cc5993f046e ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1775415801 1512 f21f83efb36853c0b70002322c1ab3ad ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm" 1775415801 1520 eccf95517727cb11801f4f1aee3a21b4 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmr6.tfm" 1775415801 1300 b62933e007d01cfd073f79b963c01526 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmr8.tfm" 1775415801 1292 21c1c5bfeaebccffdb478fd231a0997d ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1775415801 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1775415801 1120 8b7d695260f3cff42e636090a8002094 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1775415801 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1775415801 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1775415801 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1775415801 35752 024fb6c41858982481f6968b5fc26508 ""
@@ -129,15 +135,15 @@
   "img/protocol.pdf" 1778154326 1058423 5a65f1867b71d106af2a0fec2782d714 ""
   "img/results.pdf" 1778154326 533318 e05a6a4811db8ff495eb76644dabe031 ""
   "macros/macroadmin.tex" 1778154326 1733 149f31ecc72359f51228e288bf0503f3 ""
-  "neurips_2026.aux" 1778149038.05872 12670 8cc7a96c161cca0324f67cd15a46f8c9 "pdflatex"
-  "neurips_2026.bbl" 1778149037.56083 15169 126b745d0184aac716145509e57b575f "bibtex neurips_2026"
-  "neurips_2026.out" 1778149038.05901 3208 7d0646579312c6081488d3b7f8f88ce3 "pdflatex"
+  "neurips_2026.aux" 1778151547.54491 14149 521015bd4af42eb87bba41e672d2c913 "pdflatex"
+  "neurips_2026.bbl" 1778151547.04841 15169 126b745d0184aac716145509e57b575f "bibtex neurips_2026"
+  "neurips_2026.out" 1778151547.54591 3208 7d0646579312c6081488d3b7f8f88ce3 "pdflatex"
   "neurips_2026.sty" 1778154326 13462 818d80447f57703e59b8270885421e82 ""
   "neurips_2026.tex" 1778142443.32062 23259 a71bb3b81073480b4b71703995bc2fc8 ""
   "sections/1 intro.tex" 1778143299.67855 10013 8fd46752834328024fa3f3cb201fb2c6 ""
   "sections/2 related_work.tex" 1778146454.70718 11134 fcb073d1a6b68a55f98ea740e769cbc1 ""
-  "sections/3 methods.tex" 1778147155.41801 13873 87b079fd42cb74b1743210c48349a2b8 ""
-  "sections/4 results.tex" 1778147611.16323 11975 99cbe188130d0a7a1d8527d1bdd3845b ""
+  "sections/3 methods.tex" 1778151039.14764 13132 6f2bf14c6d225b2a4f33dba06c165ad0 ""
+  "sections/4 results.tex" 1778151546.24991 13034 caf0d780ec1c0997ac8ba640688fa350 ""
   "sections/5 discussion.tex" 1778149036.76102 12132 8634879c32f7b8272677d2820474ea39 ""
   (generated)
   "neurips_2026.aux"

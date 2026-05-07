@@ -16,24 +16,6 @@ We present our findings in four parts. First, we validate the baseline dynamics 
 \textbf{4.1 Spatial Summation and Classical Receptive Field Characterization.} We first validated the stability of the full model in resting state and then characterized its classical receptive field responses. In the absence of targeted stimuli, the network maintained an asynchronous-irregular firing regime with stable baseline rates, averaging approximately $0.5$ Hz in superficial layer L2/3 and $6.2$ Hz in L5, confirming that the introduction of inter-columnar and inter-areal connectivity did not induce pathological oscillations. To characterize the classical receptive field, we evaluated the network response to variations in stimulus contrast, simulated by parametrically increasing the firing rate of the topographically aligned thalamic afferents from $5$ to $30$ Hz. The model exhibited a monotonic, contrast-dependent scaling of firing rates, most prominently in the primary thalamorecipient layer L4 and the superficial layer L2/3. To confirm spatial specificity, an optimal $20$ Hz stimulus was delivered exclusively to the central microcolumn. While the stimulated central column responded vigorously, the spatially distant peripheral column remained at baseline firing levels. This demonstrates that local horizontal connections mediate effective lateral inhibition, preventing spurious propagation of strong sensory activation and preserving the spatial acuity of the classical receptive field.
 
 %==========================================================================
-% TODO: FIGURA DE VALIDACIÓN DEL CRF
-%==========================================================================
-% [AQUÍ FALTA: Referencia a una figura que muestre:
-%   - PSTH de la columna central vs periférica durante estimulación focal
-%   - Curva contraste-respuesta (firing rate vs thalamic input)
-%   - Tasas basales espontáneas por capa
-%
-\commentcd{No supe cual figura es esta.} ``Figure~\ref{fig:crf_validation} summarizes the baseline and CRF characterization. Panel A shows the spontaneous firing rates across layers, Panel B displays the contrast-response function, and Panel C confirms the spatial specificity of the CRF response.''
-\begin{figure}[t]
-  \centering
-  \includegraphics[width=\textwidth]{img/results.pdf}
-  \caption{%
-    Architectural configurations compared in this study. \commentcd{De nuevo se me confundió la B}
-  }
-  \label{fig:architectures}
-\end{figure}
-
-%==========================================================================
 % \subsection{Comparison of Architectural Configurations for Surround Suppression}
 \label{sec:results_comparison}
 %==========================================================================
@@ -54,7 +36,7 @@ The second configuration incorporated a single, global V2 module to test the hyp
 %   - Panel D: suppression index en función de la intensidad del surround
 %              (10, 20, 30 Hz) para cada arquitectura
 %
-The third architectural configuration was the only one that achieved deep suppression in both superficial and deep layers. Figure~\ref{fig:architectures} presents a comprehensive comparison of the three configurations. The peri-stimulus time histograms reveal that Configurations~1 and~2 show either weak or layer-incomplete modulation. The suppression index quantifies this difference (Table~\ref{tab:suppression_summary}), reaching approximately $77\%$ only in the competitive V2 architecture.
+The third architectural configuration was the only one that achieved deep suppression in both superficial and deep layers. Figure~\ref{fig:results}  presents a comprehensive comparison of the three configurations. The peri-stimulus time histograms reveal that Configurations~1 and~2 show either weak or layer-incomplete modulation. The suppression index quantifies this difference (Table~\ref{tab:suppression_summary}), reaching approximately $77\%$ only in the competitive V2 architecture.
 
 %==========================================================================
 % TODO: TABLA RESUMEN DE SUPRESIÓN POR ARQUITECTURA
@@ -62,28 +44,58 @@ The third architectural configuration was the only one that achieved deep suppre
 % [AQUÍ FALTA: Una tabla que resuma los valores numéricos clave. Muy útil
 % para el revisor que quiere ver los números rápidamente.
 %
-
-
-\begin{table}[t]
-  \caption{Suppression index by architecture and layer \commentcd{por què hay solo 2 capas y solo una esta cuantificada? es confuso verlo asi.}}
-  \label{tab:suppression_summary}
-  \centering
-  \begin{tabular}{lccc}
-    \toprule
-    Architecture & L2/3 Suppression & L5 Suppression & Reaches $\sim$75\%? \\
-    \midrule
-    Config.~1 (V1 lateral only)   & $\sim$36.7\% & $\sim$0\%    & No \\
-    Config.~2 (Linear V2 feedback) & $\sim$16.0\% & Moderate    & No \\
-    Config.~3 (Competitive V2)     & $\sim$77.1\% & Strong      & Yes \\
-    \bottomrule
-  \end{tabular}
-\end{table}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/results.pdf}
+    \caption{\textbf{Surround Suppression is Driven by Hierarchical Competition.} (A) Diagram of the V1-V2 competitive architecture illustrating the lateral inhibitory (IL) connections. (B) Mean firing rates across V1, V2, and thalamic populations during CRF and eCRF stimulation. Only the architecture incorporating competitive lateral inhibition in V2 replicates the profound ($\sim$75\%) suppression observed \textit{in vivo} within V1 Layer 2/3. Statistical significance is denoted by *** ($p < 0.001$).}
+    \label{fig:results}
+\end{figure}
 
 %==========================================================================
 % \subsection{Robust Suppression via Hierarchical Competitive Dynamics}
 \label{sec:results_wta}
 %==========================================================================
 \textbf{4.3 Robust Suppression via Hierarchical Competitive Dynamics.} The integration of a hierarchically segregated, competitive V2 architecture (Configuration~3) fundamentally altered the network dynamics. In this design, two distinct V2 modules, each aligned to specific feature columns in V1, interacted via strong, reciprocal inhibitory connections. Under the extra-classical receptive field stimulation protocol, activation of the peripheral column triggered a robust winner-take-all dynamic in V2. The peripheral V2 module surged in activity, actively suppressing the central V2 module, whose firing rate fell to near baseline levels, approximately $1$ Hz. This selective refinement of the feedback signal profoundly modulated V1. In the central V1 microcolumn, L2/3 activity was suppressed to $22.9\% \pm 8.3\%$ of its maximum classical receptive field response, corresponding to a suppression index of approximately $77\%$, which quantitatively replicates the $\sim 75\%$ suppression magnitude reported in macaque V1 \citep{Busse2009}.
+
+\begin{table}[t]
+  \centering
+  \caption{%
+    \textbf{Quantification of extra-classical surround suppression across architectures.}
+    Normalized activity in L2/3 of the central V1 column during the eCRF protocol (center 20 Hz, surround 30 Hz), expressed as a percentage of the peak CRF response. Values closer to 0\% indicate stronger suppression. The competitive V2 model (Config. 3) is the only architecture that quantitatively reproduces the $\sim$75\% suppression (i.e., $\sim$25\% residual activity) observed \textit{in vivo} \citep{Busse2009}.
+  }
+  \label{tab:suppression_summary}
+  \begin{tabular}{lcc}
+    \toprule
+    \textbf{Architecture} & \textbf{Normalized Activity (\% CRF)} & \textbf{Suppression Index (\%)} \\
+    \midrule
+    Config. 1 (V1 lateral only) & $63.32 \pm 4.40$ & $\sim$36.7 \\
+    Config. 2 (Linear V2 feedback) & $84.07 \pm 8.94$ & $\sim$16.0 \\
+    Config. 3 (Competitive V2) & $\mathbf{22.91 \pm 8.32}$ & $\mathbf{\sim 77.1}$ \\
+    \addlinespace
+    \textit{In vivo} data \citep{Busse2009} & $\sim 25$ & $\sim 75$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[t]
+  \centering
+  \caption{%
+    \textbf{Detailed activity profile for the competitive V2 architecture (Config. 3).}
+    Mean firing rates (in spikes/s $\pm$ SD) of excitatory neurons in the central V1 column and the central V2 module under CRF and eCRF stimulation with a 30 Hz peripheral stimulus. This configuration shows deep suppression in both V1 and V2 superficial layers, driven by hierarchical competition.
+  }
+  \label{tab:detailed_activity}
+  \begin{tabular}{lcc}
+    \toprule
+    \textbf{Area \& Layer} & \textbf{CRF (20 Hz)} & \textbf{eCRF (30 Hz)} \\
+    \midrule
+    V1 L2/3 & $6.46 \pm 0.62$ & $\mathbf{2.10 \pm 0.43}$ \\
+    V1 L5 & $30.62 \pm 0.70$ & $\mathbf{28.72 \pm 0.60}$ \\
+    \addlinespace
+    V2 L2/3 & $10.09 \pm 0.95$ & $\mathbf{1.11 \pm 0.59}$ \\
+    V2 L5 & $13.70 \pm 1.83$ & $\mathbf{19.98 \pm 1.91}$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
 To isolate the source of this modulation, we performed virtual ablation experiments. Removing the horizontal lateral connections within V1 did not abolish the surround suppression effect. This demonstrates that the top-down feedforward-feedback loop, equipped with competitive inter-areal dynamics in higher visual cortices, is sufficient to mediate robust far-surround suppression, overcoming the spatial and temporal limitations of intra-areal lateral axons.
 
