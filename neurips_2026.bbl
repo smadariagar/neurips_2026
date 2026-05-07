@@ -1,0 +1,261 @@
+\begin{thebibliography}{34}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Allman et~al.(1985)Allman, Miezin, and McGuinness]{Allman1985}
+John Allman, Francis Miezin, and EveLynn McGuinness.
+\newblock Stimulus specific responses from beyond the classical receptive field: Neurophysiological mechanisms for local-global comparisons in visual neurons.
+\newblock \emph{Annual Review of Neuroscience}, 8\penalty0 (1):\penalty0 407–430, March 1985.
+\newblock ISSN 1545-4126.
+\newblock \doi{10.1146/annurev.ne.08.030185.002203}.
+\newblock URL \url{http://dx.doi.org/10.1146/annurev.ne.08.030185.002203}.
+
+\bibitem[Angelucci and Bullier(2003)]{Angelucci2003}
+Alessandra Angelucci and Jean Bullier.
+\newblock Reaching beyond the classical receptive field of v1 neurons: horizontal or feedback axons?
+\newblock \emph{Journal of Physiology-Paris}, 97\penalty0 (2-3):\penalty0 141--154, March 2003.
+\newblock \doi{10.1016/j.jphysparis.2003.09.001}.
+\newblock URL \url{https://doi.org/10.1016/j.jphysparis.2003.09.001}.
+
+\bibitem[Bair et~al.(2003)Bair, Cavanaugh, and Movshon]{Bair2003}
+Wyeth Bair, James~R. Cavanaugh, and J.~Anthony Movshon.
+\newblock Time course and time-distance relationships for surround suppression in macaque v1 neurons.
+\newblock \emph{The Journal of Neuroscience}, 23\penalty0 (20):\penalty0 7690–7701, August 2003.
+\newblock ISSN 1529-2401.
+\newblock \doi{10.1523/jneurosci.23-20-07690.2003}.
+\newblock URL \url{http://dx.doi.org/10.1523/JNEUROSCI.23-20-07690.2003}.
+
+\bibitem[Schwabe et~al.(2006)Schwabe, Obermayer, Angelucci, and Bressloff]{Schwabe2006}
+Lars Schwabe, Klaus Obermayer, Alessandra Angelucci, and Paul~C. Bressloff.
+\newblock The role of feedback in shaping the extra-classical receptive field of cortical neurons: A recurrent network model.
+\newblock \emph{The Journal of Neuroscience}, 26\penalty0 (36):\penalty0 9117–9129, September 2006.
+\newblock ISSN 1529-2401.
+\newblock \doi{10.1523/jneurosci.1253-06.2006}.
+\newblock URL \url{http://dx.doi.org/10.1523/JNEUROSCI.1253-06.2006}.
+
+\bibitem[Angelucci et~al.(2017)Angelucci, Bijanzadeh, Nurminen, Federer, Merlin, and Bressloff]{Angelucci2017}
+Alessandra Angelucci, Maryam Bijanzadeh, Lauri Nurminen, Frederick Federer, Sam Merlin, and Paul~C. Bressloff.
+\newblock Circuits and mechanisms for surround modulation in visual cortex.
+\newblock \emph{Annual Review of Neuroscience}, 40\penalty0 (1):\penalty0 425–451, July 2017.
+\newblock ISSN 1545-4126.
+\newblock \doi{10.1146/annurev-neuro-072116-031418}.
+\newblock URL \url{http://dx.doi.org/10.1146/annurev-neuro-072116-031418}.
+
+\bibitem[Potjans and Diesmann(2014)]{Potjans2014}
+Tobias~C. Potjans and Markus Diesmann.
+\newblock The cell-type specific cortical microcircuit: Relating structure and activity in a full-scale spiking network model.
+\newblock \emph{Cerebral Cortex}, 24\penalty0 (3):\penalty0 785--806, March 2014.
+\newblock \doi{10.1093/cercor/bhs358}.
+\newblock URL \url{https://doi.org/10.1093/cercor/bhs358}.
+
+\bibitem[Busse et~al.(2009)Busse, Wade, and Carandini]{Busse2009}
+Laura Busse, Alex~R. Wade, and Matteo Carandini.
+\newblock Representation of concurrent stimuli by population activity in visual cortex.
+\newblock \emph{Neuron}, 64\penalty0 (6):\penalty0 931–942, December 2009.
+\newblock ISSN 0896-6273.
+\newblock \doi{10.1016/j.neuron.2009.11.004}.
+\newblock URL \url{http://dx.doi.org/10.1016/j.neuron.2009.11.004}.
+
+\bibitem[Dąbrowska et~al.(2021)Dąbrowska, Voges, von Papen, Ito, Dahmen, Riehle, Brochier, and Gr\"{u}n]{Dbrowska2021}
+Paulina~Anna Dąbrowska, Nicole Voges, Michael von Papen, Junji Ito, David Dahmen, Alexa Riehle, Thomas Brochier, and Sonja Gr\"{u}n.
+\newblock On the complexity of resting state spiking activity in monkey motor cortex.
+\newblock \emph{Cerebral Cortex Communications}, 2\penalty0 (3), January 2021.
+\newblock ISSN 2632-7376.
+\newblock \doi{10.1093/texcom/tgab033}.
+\newblock URL \url{http://dx.doi.org/10.1093/texcom/tgab033}.
+
+\bibitem[Gewaltig and Diesmann(2007)]{Gewaltig2007}
+Marc~Oliver Gewaltig and Markus Diesmann.
+\newblock Nest (neural simulation tool).
+\newblock \emph{Scholarpedia}, 2\penalty0 (4):\penalty0 1430, 2007.
+\newblock ISSN 1941-6016.
+\newblock \doi{10.4249/scholarpedia.1430}.
+\newblock URL \url{http://dx.doi.org/10.4249/scholarpedia.1430}.
+
+\bibitem[Somers et~al.(1995)Somers, Nelson, and Sur]{Somers1995}
+DC~Somers, SB~Nelson, and M~Sur.
+\newblock An emergent model of orientation selectivity in cat visual cortical simple cells.
+\newblock \emph{The Journal of Neuroscience}, 15\penalty0 (8):\penalty0 5448–5465, August 1995.
+\newblock ISSN 1529-2401.
+\newblock \doi{10.1523/jneurosci.15-08-05448.1995}.
+\newblock URL \url{http://dx.doi.org/10.1523/jneurosci.15-08-05448.1995}.
+
+\bibitem[Wagatsuma et~al.(2013)Wagatsuma, Potjans, Diesmann, Sakai, and Fukai]{Wagatsuma2013}
+Nobuhiko Wagatsuma, Tobias~C. Potjans, Markus Diesmann, Ko~Sakai, and Tomoki Fukai.
+\newblock Spatial and feature-based attention in a layered cortical microcircuit model.
+\newblock \emph{{PLoS} {ONE}}, 8\penalty0 (12):\penalty0 e80788, December 2013.
+\newblock \doi{10.1371/journal.pone.0080788}.
+\newblock URL \url{https://doi.org/10.1371/journal.pone.0080788}.
+
+\bibitem[Lee et~al.(2017)Lee, Koch, and Mihalas]{Lee2017}
+Jung~H. Lee, Christof Koch, and Stefan Mihalas.
+\newblock A computational analysis of the function of three inhibitory cell types in contextual visual processing.
+\newblock \emph{Frontiers in Computational Neuroscience}, 11, April 2017.
+\newblock ISSN 1662-5188.
+\newblock \doi{10.3389/fncom.2017.00028}.
+\newblock URL \url{http://dx.doi.org/10.3389/fncom.2017.00028}.
+
+\bibitem[Del~Rosario et~al.(2025)Del~Rosario, Coletta, Kim, Mobille, Peelman, Williams, Otsuki, Del Castillo~Valerio, Worden, Blanpain, Lovell, Choi, and Haider]{DelRosario2025}
+Joseph Del~Rosario, Stefano Coletta, Soon~Ho Kim, Zach Mobille, Kayla Peelman, Brice Williams, Alan~J. Otsuki, Alejandra Del Castillo~Valerio, Kendell Worden, Lou~T. Blanpain, Lyndah Lovell, Hannah Choi, and Bilal Haider.
+\newblock Lateral inhibition in v1 controls neural and perceptual contrast sensitivity.
+\newblock \emph{Nature Neuroscience}, 28\penalty0 (4):\penalty0 836–847, March 2025.
+\newblock ISSN 1546-1726.
+\newblock \doi{10.1038/s41593-025-01888-4}.
+\newblock URL \url{http://dx.doi.org/10.1038/s41593-025-01888-4}.
+
+\bibitem[Stettler et~al.(2002)Stettler, Das, Bennett, and Gilbert]{Stettler2002}
+Dan~D Stettler, Aniruddha Das, Jean Bennett, and Charles~D Gilbert.
+\newblock Lateral connectivity and contextual interactions in macaque primary visual cortex.
+\newblock \emph{Neuron}, 36\penalty0 (4):\penalty0 739--750, November 2002.
+\newblock \doi{10.1016/s0896-6273(02)01029-2}.
+\newblock URL \url{https://doi.org/10.1016/s0896-6273(02)01029-2}.
+
+\bibitem[Carandini and Heeger(2011)]{Carandini2011}
+Matteo Carandini and David~J. Heeger.
+\newblock Normalization as a canonical neural computation.
+\newblock \emph{Nature Reviews Neuroscience}, 13\penalty0 (1):\penalty0 51–62, November 2011.
+\newblock ISSN 1471-0048.
+\newblock \doi{10.1038/nrn3136}.
+\newblock URL \url{http://dx.doi.org/10.1038/nrn3136}.
+
+\bibitem[Schmidt et~al.(2018)Schmidt, Bakker, Shen, Bezgin, Diesmann, and van Albada]{Schmidt2018}
+Maximilian Schmidt, Rembrandt Bakker, Kelly Shen, Gleb Bezgin, Markus Diesmann, and Sacha~Jennifer van Albada.
+\newblock A multi-scale layer-resolved spiking network model of resting-state dynamics in macaque visual cortical areas.
+\newblock \emph{PLOS Computational Biology}, 14\penalty0 (10):\penalty0 e1006359, October 2018.
+\newblock ISSN 1553-7358.
+\newblock \doi{10.1371/journal.pcbi.1006359}.
+\newblock URL \url{http://dx.doi.org/10.1371/journal.pcbi.1006359}.
+
+\bibitem[Brunel and Wang(2001)]{Brunel2001}
+Nicolas Brunel and Xiao-Jing Wang.
+\newblock Effects of neuromodulation in a cortical network model of object working memory dominated by recurrent inhibition.
+\newblock \emph{Journal of Computational Neuroscience}, 11\penalty0 (1):\penalty0 63–85, July 2001.
+\newblock ISSN 1573-6873.
+\newblock \doi{10.1023/a:1011204814320}.
+\newblock URL \url{http://dx.doi.org/10.1023/a:1011204814320}.
+
+\bibitem[Neftci et~al.(2019)Neftci, Mostafa, and Zenke]{Neftci2019}
+Emre~O. Neftci, Hesham Mostafa, and Friedemann Zenke.
+\newblock Surrogate gradient learning in spiking neural networks: Bringing the power of gradient-based optimization to spiking neural networks.
+\newblock \emph{IEEE Signal Processing Magazine}, 36\penalty0 (6):\penalty0 51–63, November 2019.
+\newblock ISSN 1558-0792.
+\newblock \doi{10.1109/msp.2019.2931595}.
+\newblock URL \url{http://dx.doi.org/10.1109/MSP.2019.2931595}.
+
+\bibitem[Heeger(1992)]{Heeger1992}
+David~J. Heeger.
+\newblock Normalization of cell responses in cat striate cortex.
+\newblock \emph{Visual Neuroscience}, 9\penalty0 (2):\penalty0 181–197, August 1992.
+\newblock ISSN 1469-8714.
+\newblock \doi{10.1017/s0952523800009640}.
+\newblock URL \url{http://dx.doi.org/10.1017/s0952523800009640}.
+
+\bibitem[Reynolds and Heeger(2009)]{Reynolds2009}
+John~H. Reynolds and David~J. Heeger.
+\newblock The normalization model of attention.
+\newblock \emph{Neuron}, 61\penalty0 (2):\penalty0 168–185, January 2009.
+\newblock ISSN 0896-6273.
+\newblock \doi{10.1016/j.neuron.2009.01.002}.
+\newblock URL \url{http://dx.doi.org/10.1016/j.neuron.2009.01.002}.
+
+\bibitem[Louie et~al.(2013)Louie, Khaw, and Glimcher]{Louie2013}
+Kenway Louie, Mel~W. Khaw, and Paul~W. Glimcher.
+\newblock Normalization is a general neural mechanism for context-dependent decision making.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 110\penalty0 (15):\penalty0 6139–6144, March 2013.
+\newblock ISSN 1091-6490.
+\newblock \doi{10.1073/pnas.1217854110}.
+\newblock URL \url{http://dx.doi.org/10.1073/pnas.1217854110}.
+
+\bibitem[Ioffe and Szegedy(2015)]{Ioffe15}
+Sergey Ioffe and Christian Szegedy.
+\newblock Batch normalization: Accelerating deep network training by reducing internal covariate shift.
+\newblock In Francis Bach and David Blei, editors, \emph{Proceedings of the 32nd International Conference on Machine Learning}, volume~37 of \emph{Proceedings of Machine Learning Research}, pages 448--456, Lille, France, 07--09 Jul 2015. PMLR.
+\newblock URL \url{https://proceedings.mlr.press/v37/ioffe15.html}.
+
+\bibitem[Ba et~al.(2016)Ba, Kiros, and Hinton]{Ba2016}
+Jimmy~Lei Ba, Jamie~Ryan Kiros, and Geoffrey~E. Hinton.
+\newblock Layer normalization, 2016.
+\newblock URL \url{https://arxiv.org/abs/1607.06450}.
+
+\bibitem[Ren et~al.(2016)Ren, Liao, Urtasun, Sinz, and Zemel]{Ren2016}
+Mengye Ren, Renjie Liao, Raquel Urtasun, Fabian~H. Sinz, and Richard~S. Zemel.
+\newblock Normalizing the normalizers: Comparing and extending network normalization schemes, 2016.
+\newblock URL \url{https://arxiv.org/abs/1611.04520}.
+
+\bibitem[Rao and Ballard(1999)]{Rao1999}
+Rajesh P.~N. Rao and Dana~H. Ballard.
+\newblock Predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects.
+\newblock \emph{Nature Neuroscience}, 2\penalty0 (1):\penalty0 79--87, January 1999.
+\newblock \doi{10.1038/4580}.
+\newblock URL \url{https://doi.org/10.1038/4580}.
+
+\bibitem[Friston(2005)]{Friston2005}
+Karl Friston.
+\newblock A theory of cortical responses.
+\newblock \emph{Philosophical Transactions of the Royal Society B: Biological Sciences}, 360\penalty0 (1456):\penalty0 815–836, April 2005.
+\newblock ISSN 1471-2970.
+\newblock \doi{10.1098/rstb.2005.1622}.
+\newblock URL \url{http://dx.doi.org/10.1098/rstb.2005.1622}.
+
+\bibitem[Desimone and Duncan(1995)]{Desimone1995}
+Robert Desimone and John Duncan.
+\newblock Neural mechanisms of selective visual attention.
+\newblock \emph{Annual Review of Neuroscience}, 18\penalty0 (1):\penalty0 193–222, March 1995.
+\newblock ISSN 1545-4126.
+\newblock \doi{10.1146/annurev.ne.18.030195.001205}.
+\newblock URL \url{http://dx.doi.org/10.1146/annurev.ne.18.030195.001205}.
+
+\bibitem[Reynolds et~al.(1999)Reynolds, Chelazzi, and Desimone]{Reynolds1999}
+John~H. Reynolds, Leonardo Chelazzi, and Robert Desimone.
+\newblock Competitive mechanisms subserve attention in macaque areas v2 and v4.
+\newblock \emph{The Journal of Neuroscience}, 19\penalty0 (5):\penalty0 1736–1753, March 1999.
+\newblock ISSN 1529-2401.
+\newblock \doi{10.1523/jneurosci.19-05-01736.1999}.
+\newblock URL \url{http://dx.doi.org/10.1523/JNEUROSCI.19-05-01736.1999}.
+
+\bibitem[Brunel(2000)]{Brunel2000}
+Nicolas Brunel.
+\newblock Dynamics of sparsely connected networks of excitatory and inhibitory spiking neurons.
+\newblock \emph{Journal of Computational Neuroscience}, 8\penalty0 (3):\penalty0 183–208, May 2000.
+\newblock ISSN 1573-6873.
+\newblock \doi{10.1023/a:1008925309027}.
+\newblock URL \url{http://dx.doi.org/10.1023/A:1008925309027}.
+
+\bibitem[Vinje and Gallant(2000)]{Vinje2000}
+William~E. Vinje and Jack~L. Gallant.
+\newblock Sparse coding and decorrelation in primary visual cortex during natural vision.
+\newblock \emph{Science}, 287\penalty0 (5456):\penalty0 1273–1276, February 2000.
+\newblock ISSN 1095-9203.
+\newblock \doi{10.1126/science.287.5456.1273}.
+\newblock URL \url{http://dx.doi.org/10.1126/science.287.5456.1273}.
+
+\bibitem[Oord et~al.(2018)Oord, Li, and Vinyals]{Oord2018}
+Aaron van~den Oord, Yazhe Li, and Oriol Vinyals.
+\newblock Representation learning with contrastive predictive coding, 2018.
+\newblock URL \url{https://arxiv.org/abs/1807.03748}.
+
+\bibitem[Chen et~al.(2020)Chen, Kornblith, Norouzi, and Hinton]{Chen2020}
+Ting Chen, Simon Kornblith, Mohammad Norouzi, and Geoffrey Hinton.
+\newblock A simple framework for contrastive learning of visual representations.
+\newblock In \emph{International conference on machine learning}, pages 1597--1607. PmLR, 2020.
+
+\bibitem[Davies et~al.(2018)Davies, Srinivasa, Lin, Chinya, Cao, Choday, Dimou, Joshi, Imam, Jain, Liao, Lin, Lines, Liu, Mathaikutty, McCoy, Paul, Tse, Venkataramanan, Weng, Wild, Yang, and Wang]{Davies2018}
+Mike Davies, Narayan Srinivasa, Tsung-Han Lin, Gautham Chinya, Yongqiang Cao, Sri~Harsha Choday, Georgios Dimou, Prasad Joshi, Nabil Imam, Shweta Jain, Yuyun Liao, Chit-Kwan Lin, Andrew Lines, Ruokun Liu, Deepak Mathaikutty, Steven McCoy, Arnab Paul, Jonathan Tse, Guruguhanathan Venkataramanan, Yi-Hsin Weng, Andreas Wild, Yoonseok Yang, and Hong Wang.
+\newblock Loihi: A neuromorphic manycore processor with on-chip learning.
+\newblock \emph{IEEE Micro}, 38\penalty0 (1):\penalty0 82–99, January 2018.
+\newblock ISSN 1937-4143.
+\newblock \doi{10.1109/mm.2018.112130359}.
+\newblock URL \url{http://dx.doi.org/10.1109/MM.2018.112130359}.
+
+\bibitem[Furber et~al.(2014)Furber, Galluppi, Temple, and Plana]{Furber2014}
+Steve~B. Furber, Francesco Galluppi, Steve Temple, and Luis~A. Plana.
+\newblock The spinnaker project.
+\newblock \emph{Proceedings of the IEEE}, 102\penalty0 (5):\penalty0 652–665, May 2014.
+\newblock ISSN 1558-2256.
+\newblock \doi{10.1109/jproc.2014.2304638}.
+\newblock URL \url{http://dx.doi.org/10.1109/JPROC.2014.2304638}.
+
+\end{thebibliography}
