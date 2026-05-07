@@ -7,41 +7,12 @@
 % [AQUÍ FALTA: Un párrafo breve (2-3 oraciones) que resuma la estrategia
 % metodológica y anticipe las subsecciones. En NeurIPS esto ayuda al revisor.
 %
-``To systematically evaluate the circuit mechanisms underlying extra-classical
-surround suppression, we implemented a large-scale spiking neural network
-using the NEST simulator \citep{Gewaltig2007}. We constructed three
-architectural configurations of increasing complexity, all grounded in the
-canonical cortical microcircuit \citep{Potjans2014}: (1) V1 columns with only
-lateral intra-areal connections, (2) a V1-V2 hierarchy with simple convergent
-feedback, and (3) a V1-V2 hierarchy with reciprocal lateral inhibition between
-V2 modules. Below we describe the neuron model, the laminar microcircuit
-architecture, the hierarchical connectivity, the stimulation protocols, and
-the data analysis pipeline.''
+``To systematically evaluate the circuit mechanisms underlying extra-classical surround suppression, we implemented a large-scale spiking neural network using the NEST simulator \citep{Gewaltig2007}. We constructed three architectural configurations of increasing complexity, all grounded in the canonical cortical microcircuit \citep{Potjans2014}: (1) V1 columns with only lateral intra-areal connections, (2) a V1-V2 hierarchy with simple convergent feedback, and (3) a V1-V2 hierarchy with reciprocal lateral inhibition between V2 modules. Below we describe the neuron model, the laminar microcircuit architecture, the hierarchical connectivity, the stimulation protocols, and the data analysis pipeline.''
 
 %==========================================================================
 \subsection{Neuron Model and Simulation Environment}
 %==========================================================================
-All computational experiments were conducted using the NEST simulator, a
-framework specifically optimized for the simulation of large-scale spiking
-neural networks. The fundamental processing units of the network are modeled
-as leaky integrate-and-fire (LIF) neurons with exact integration and
-exponential-decaying postsynaptic currents. The subthreshold dynamics of the
-membrane potential ($V_m$) are governed by the membrane time constant
-($\tau_m = 10$ ms), membrane capacity ($C_m = 250$ pF), and a resting
-potential ($V_{\text{rest}}$) of $-65$ mV. An action potential is generated
-when $V_m$ reaches a critical threshold ($V_{\text{th}} = -50$ mV), after
-which the potential is strictly clamped to a reset value
-($V_{\text{reset}} = -65$ mV) for the duration of an absolute refractory
-period ($\tau_{\text{ref}} = 2$ ms). Synaptic parameters were carefully tuned
-to ensure network stability and to sustain the asynchronous-irregular firing
-regimes characteristic of awake cortical states. Specifically, excitatory
-synaptic weights were set to $w = 87.8 \pm 8.8$ pA with a decay time constant
-$\tau_{\text{syn}} = 0.5$ ms, and the relative inhibitory synaptic strength
-($g$) was fixed at $-4$. Transmission delays were uniformly distributed at
-$1.5 \pm 0.75$ ms for excitatory synapses and $0.75 \pm 0.38$ ms for
-inhibitory synapses. To emulate background cortical activity, each neuron
-received external inputs modeled as Poisson spike trains with a mean rate of
-8 Hz.
+All computational experiments were conducted using the NEST simulator, a framework specifically optimized for the simulation of large-scale spiking neural networks. The fundamental processing units of the network are modeled as leaky integrate-and-fire (LIF) neurons with exact integration and exponential-decaying postsynaptic currents. The subthreshold dynamics of the membrane potential ($V_m$) are governed by the membrane time constant ($\tau_m = 10$ ms), membrane capacity ($C_m = 250$ pF), and a resting potential ($V_{\text{rest}}$) of $-65$ mV. An action potential is generated when $V_m$ reaches a critical threshold ($V_{\text{th}} = -50$ mV), after which the potential is strictly clamped to a reset value ($V_{\text{reset}} = -65$ mV) for the duration of an absolute refractory period ($\tau_{\text{ref}} = 2$ ms). Synaptic parameters were carefully tuned to ensure network stability and to sustain the asynchronous-irregular firing regimes characteristic of awake cortical states. Specifically, excitatory synaptic weights were set to $w = 87.8 \pm 8.8$ pA with a decay time constant $\tau_{\text{syn}} = 0.5$ ms, and the relative inhibitory synaptic strength ($g$) was fixed at $-4$. Transmission delays were uniformly distributed at $1.5 \pm 0.75$ ms for excitatory synapses and $0.75 \pm 0.38$ ms for inhibitory synapses. To emulate background cortical activity, each neuron received external inputs modeled as Poisson spike trains with a mean rate of 8 Hz.
 
 %==========================================================================
 % TODO: ECUACIÓN DEL LIF
@@ -57,36 +28,18 @@ received external inputs modeled as Poisson spike trains with a mean rate of
 \begin{equation}
   \tau_m \frac{dV_m}{dt} = -(V_m - V_{\text{rest}}) + R_m I_{\text{syn}}(t),
 \end{equation}
-where $R_m$ is the membrane resistance and $I_{\text{syn}}(t)$ represents
-the total synaptic current. Each synaptic input generates a
-conductance-based current with exponential decay:
+where $R_m$ is the membrane resistance and $I_{\text{syn}}(t)$ represents the total synaptic current. Each synaptic input generates a conductance-based current with exponential decay:
 \begin{equation}
   I_{\text{syn}}(t) = w \, e^{-t / \tau_{\text{syn}}},
 \end{equation}
-where $w$ is the synaptic weight and $\tau_{\text{syn}}$ is the synaptic
-time constant.''
+where $w$ is the synaptic weight and $\tau_{\text{syn}}$ is the synaptic time constant.''
 
 %==========================================================================
 \subsection{Laminar Microcircuit Architecture}
 %==========================================================================
-The primary visual cortex (V1) module is designed to represent a
-$1 \text{ mm}^2$ patch of cortical tissue, based on the full-scale canonical
-microcircuit model proposed by \citet{Potjans2014}. It comprises approximately
-77,000 neurons distributed across four distinct laminar layers: L2/3, L4, L5,
-and L6. Within each layer, the network maintains a physiological balance of
-specific excitatory and inhibitory populations, approximating an 80/20 ratio.
-Local recurrent connectivity is established using empirically derived
-connection probabilities.
+The primary visual cortex (V1) module is designed to represent a $1 \text{ mm}^2$ patch of cortical tissue, based on the full-scale canonical microcircuit model proposed by \citet{Potjans2014}. It comprises approximately 77,000 neurons distributed across four distinct laminar layers: L2/3, L4, L5, and L6. Within each layer, the network maintains a physiological balance of specific excitatory and inhibitory populations, approximating an 80/20 ratio. Local recurrent connectivity is established using empirically derived connection probabilities.
 
-To capture intra-areal spatial integration, long-range horizontal projections
-within V1 are incorporated. Crucially, these lateral connections are restricted
-to the superficial L2/3 layer and are functionally segregated based on
-distance. Nearby connections link functionally similar adjacent columns
-(iso-orientation) with both excitatory and inhibitory synapses (transmission
-delay $d_{\text{n.lat}} = 5 \pm 1.5$ ms). In contrast, distant connections
-link columns with disparate orientation preferences and operate via a
-predominantly suppressive mechanism (disynaptic inhibition) with a slower
-conduction delay ($d_{\text{d.lat}} = 8 \pm 2.5$ ms).
+To capture intra-areal spatial integration, long-range horizontal projections within V1 are incorporated. Crucially, these lateral connections are restricted to the superficial L2/3 layer and are functionally segregated based on distance. Nearby connections link functionally similar adjacent columns (iso-orientation) with both excitatory and inhibitory synapses (transmission delay $d_{\text{n.lat}} = 5 \pm 1.5$ ms). In contrast, distant connections link columns with disparate orientation preferences and operate via a predominantly suppressive mechanism (disynaptic inhibition) with a slower conduction delay ($d_{\text{d.lat}} = 8 \pm 2.5$ ms).
 
 %==========================================================================
 % TODO: TABLA DE CONEXIONES O FIGURA DEL MICROCIRCUITO
@@ -96,37 +49,28 @@ conduction delay ($d_{\text{d.lat}} = 8 \pm 2.5$ ms).
 % Potjans & Diesmann, al menos menciona que usas las mismas probabilidades y
 % remite a una tabla en el apéndice.
 %
-``The complete connection probability matrix between the eight neuronal
-populations (four layers $\times$ two types) follows the values reported by
-\citet{Potjans2014} and is provided in Table~\ref{tab:connectivity} of the
-Appendix for completeness.''
+``The complete connection probability matrix between the eight neuronal populations (four layers $\times$ two types) follows the values reported by \citet{Potjans2014} and is provided in Table~\ref{tab:connectivity} of the Appendix for completeness.''
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\textwidth]{img/architectures.pdf}
+  \caption{%
+    \textbf{Architectural configurations compared in this study.}
+    \textbf{(A)} Connections of the canonical V1 circuit.
+    \textbf{(B)} Overall architecture of the near and distant lateral connections, and the feedforward and feedback connections between V1 and V2.
+    \textbf{(C)} Configuration~1: V1 microcolumns with lateral intra-areal connections only.
+    \textbf{(D)} Configuration~2: V1-V2 hierarchy with a single V2 module providing non-specific feedback.
+    \textbf{(E)} Configuration~3: V1-V2 hierarchy with two V2 modules interconnected via reciprocal lateral inhibitory connections, implementing hierarchical winner-take-all competition.
+  }
+  \label{fig:architectures}
+\end{figure}
 
 %==========================================================================
 \subsection{Hierarchical Integration and Competitive Dynamics}
 %==========================================================================
-To investigate the mechanistic origins of extra-classical receptive field
-(eCRF) effects, the baseline architecture was extended to include a
-higher-order visual area (V2). The V2 module was adapted to mirror the
-specific cytoarchitectural variations in laminar thickness and neuronal
-densities of the macaque V2 region. Inter-areal communication is mediated by
-targeted topographic projections operating with fast transmission delays
-($2 \pm 0.5$ ms). Feedforward (FF) pathways originate from the superficial
-layers (L2/3) of V1 and terminate predominantly in L4 and L6 of V2.
-Conversely, top-down feedback (FB) projections originate from the deep layers
-(L5 and L6) of V2 and target the superficial (L2/3) and infragranular (L5)
-layers of V1, anatomically avoiding layer 4 to provide non-linear modulation
-rather than driving inputs.
+To investigate the mechanistic origins of extra-classical receptive field (eCRF) effects, the baseline architecture was extended to include a higher-order visual area (V2). The V2 module was adapted to mirror the specific cytoarchitectural variations in laminar thickness and neuronal densities of the macaque V2 region. Inter-areal communication is mediated by targeted topographic projections operating with fast transmission delays ($2 \pm 0.5$ ms). Feedforward (FF) pathways originate from the superficial layers (L2/3) of V1 and terminate predominantly in L4 and L6 of V2. Conversely, top-down feedback (FB) projections originate from the deep layers (L5 and L6) of V2 and target the superficial (L2/3) and infragranular (L5) layers of V1, anatomically avoiding layer 4 to provide non-linear modulation rather than driving inputs.
 
-Crucially, to test the hypothesis that eCRF phenomena emerge from inter-areal
-interactions rather than purely local filtering, a lateral competition
-mechanism was embedded within the V2 module. This architecture utilizes two
-spatially distinct, feature-aligned V2 modules that engage in lateral
-competition mediated by strong, reciprocal inhibitory connections. By
-enforcing this hierarchical winner-take-all competition, the top-down feedback
-signals are non-linearly refined before modulating V1 activity. This
-architectural feature is designed to overcome the limitations of simple linear
-feedback models, ultimately reproducing the robust, stimulus-specific surround
-suppression observed in physiological recordings.
+Crucially, to test the hypothesis that eCRF phenomena emerge from inter-areal interactions rather than purely local filtering, a lateral competition mechanism was embedded within the V2 module. This architecture utilizes two spatially distinct, feature-aligned V2 modules that engage in lateral competition mediated by strong, reciprocal inhibitory connections. By enforcing this hierarchical winner-take-all competition, the top-down feedback signals are non-linearly refined before modulating V1 activity. This architectural feature is designed to overcome the limitations of simple linear feedback models, ultimately reproducing the robust, stimulus-specific surround suppression observed in physiological recordings.
 
 %==========================================================================
 % TODO: DESCRIPCIÓN FORMAL DE LAS TRES ARQUITECTURAS
@@ -134,26 +78,13 @@ suppression observed in physiological recordings.
 % [AQUÍ FALTA: Describir explícitamente las tres configuraciones que
 % comparaste, de forma que quede claro qué tiene cada una y qué no.
 %
-``To isolate the contribution of each circuit component, we systematically
-compared three architectural configurations (see Figure~\ref{fig:architectures}):
+``To isolate the contribution of each circuit component, we systematically compared three architectural configurations (see Figure~\ref{fig:architectures}):
 \begin{description}
-  \item[Configuration 1 (V1 lateral only):] Four V1 microcolumns arranged
-        in a ring, interconnected exclusively via horizontal connections
-        within L2/3. No V2 modules are present.\footnote{Se puede poner esto como pie de figura en lugar de aquí.}
-  \item[Configuration 2 (V1 + linear V2 feedback):] The V1 columns project
-        feedforward to a \emph{single} V2 module, which pools inputs from all
-        columns and returns non-specific feedback to V1. This configuration
-        implements hierarchical feedback without lateral competition.
-  \item[Configuration 3 (V1 + competitive V2 feedback):] The V1 columns
-        project feedforward to \emph{two} V2 modules, each aligned to a
-        specific orientation column. Critically, the two V2 modules are
-        connected via strong, reciprocal inhibitory synapses, implementing
-        a winner-take-all competition.
+  \item[Configuration 1 (V1 lateral only):] Four V1 microcolumns arranged in a ring, interconnected exclusively via horizontal connections within L2/3. No V2 modules are present.\footnote{Se puede poner esto como pie de figura en lugar de aquí.}
+  \item[Configuration 2 (V1 + linear V2 feedback):] The V1 columns project feedforward to a \emph{single} V2 module, which pools inputs from all columns and returns non-specific feedback to V1. This configuration implements hierarchical feedback without lateral competition.
+  \item[Configuration 3 (V1 + competitive V2 feedback):] The V1 columns project feedforward to \emph{two} V2 modules, each aligned to a specific orientation column. Critically, the two V2 modules are connected via strong, reciprocal inhibitory synapses, implementing a winner-take-all competition.
 \end{description}
-All other parameters --- neuron counts, local connectivity, stimulation
-protocols --- are held constant across configurations to ensure that
-differences in suppression magnitude can be attributed exclusively to the
-architectural manipulation.''
+All other parameters --- neuron counts, local connectivity, stimulation protocols --- are held constant across configurations to ensure that differences in suppression magnitude can be attributed exclusively to the architectural manipulation.''
 
 %==========================================================================
 % TODO: FIGURA DE LAS TRES ARQUITECTURAS
@@ -161,17 +92,17 @@ architectural manipulation.''
 % [AQUÍ FALTA: Referencia a una figura esquemática mostrando las tres
 % configuraciones lado a lado. Esto es crítico para NeurIPS.
 %
-``A schematic of the three configurations is provided in
-Figure~\ref{fig:architectures}.''
-
+``A schematic of the three configurations is provided in Figure~\ref{fig:architectures}.''
 \begin{figure}[t]
   \centering
-  \includegraphics[width=\textwidth]{img/architectures.pdf}
+  \includegraphics[width=\textwidth]{img/protocol.pdf}
   \caption{%
     \textbf{Architectural configurations compared in this study.}
-    \textbf{(A)} Configuration~1: V1 microcolumns with lateral intra-areal connections only.
-    \textbf{(B)} Configuration~2: V1-V2 hierarchy with a single V2 module providing non-specific feedback.
-    \textbf{(C)} Configuration~3: V1-V2 hierarchy with two V2 modules interconnected via reciprocal lateral inhibitory connections, implementing hierarchical winner-take-all competition.
+    \textbf{(A)} Connections of the canonical V1 circuit.
+    \textbf{(B)} Overall architecture of the near and distant lateral connections, and the feedforward and feedback connections between V1 and V2.
+    \textbf{(C)} Configuration~1: V1 microcolumns with lateral intra-areal connections only.
+    \textbf{(D)} Configuration~2: V1-V2 hierarchy with a single V2 module providing non-specific feedback.
+    \textbf{(E)} Configuration~3: V1-V2 hierarchy with two V2 modules interconnected via reciprocal lateral inhibitory connections, implementing hierarchical winner-take-all competition.
   }
   \label{fig:architectures}
 \end{figure}
@@ -179,17 +110,7 @@ Figure~\ref{fig:architectures}.''
 %==========================================================================
 \subsection{Sensory Stimulation Protocols}
 %==========================================================================
-Bottom-up sensory stimulation was emulated through thalamocortical afferents
-originating from the lateral geniculate nucleus (LGN), projecting primarily to
-layers L4 and L6 of V1. Thalamic inputs were modeled as Poisson spike trains.
-To simulate the classical receptive field (CRF) response, the thalamic firing
-rate directed at the central microcolumn was increased to 20 Hz (simulating
-optimal stimulus contrast) after a 500 ms baseline period. To evaluate the
-extra-classical modulations, a dual asynchronous stimulation paradigm was
-employed: following the central CRF activation at 500 ms, a distant peripheral
-column was stimulated at 1000 ms. The intensity of this peripheral contextual
-stimulus was systematically varied (10, 20, and 30 Hz) to quantify the
-magnitude of surround suppression.
+Bottom-up sensory stimulation was emulated through thalamocortical afferents originating from the lateral geniculate nucleus (LGN), projecting primarily to layers L4 and L6 of V1. Thalamic inputs were modeled as Poisson spike trains. To simulate the classical receptive field (CRF) response, the thalamic firing rate directed at the central microcolumn was increased to 20 Hz (simulating optimal stimulus contrast) after a 500 ms baseline period. To evaluate the extra-classical modulations, a dual asynchronous stimulation paradigm was employed: following the central CRF activation at 500 ms, a distant peripheral column was stimulated at 1000 ms. The intensity of this peripheral contextual stimulus was systematically varied (10, 20, and 30 Hz) to quantify the magnitude of surround suppression.
 
 %==========================================================================
 % TODO: DEFINICIÓN FORMAL DEL SUPPRESSION INDEX
@@ -202,42 +123,12 @@ suppression index (SI) as:
 \begin{equation}
   \text{SI} = 1 - \frac{R_{\text{center+surround}}}{R_{\text{center}}},
 \end{equation}
-where $R_{\text{center}}$ is the mean firing rate of the central column
-during CRF stimulation alone, and $R_{\text{center+surround}}$ is the mean
-firing rate during concurrent center and peripheral stimulation. An SI of 1
-indicates complete suppression, while an SI of 0 indicates no contextual
-modulation.''
+where $R_{\text{center}}$ is the mean firing rate of the central column during CRF stimulation alone, and $R_{\text{center+surround}}$ is the mean firing rate during concurrent center and peripheral stimulation. An SI of 1 indicates complete suppression, while an SI of 0 indicates no contextual modulation.''
 
 %==========================================================================
 \subsection{Data Analysis and Local Field Potentials}
 %==========================================================================
-Network dynamics and mean firing rates were evaluated using peri-stimulus
-time histograms (PSTH). To connect the spiking network model to macroscopic
-electrophysiological biomarkers --- such as gamma-band oscillations and
-excitation/inhibition (E/I) balance alterations --- we simulated the Local
-Field Potential (LFP) using a spatiotemporal kernel-based approximation. In
-this framework, the macroscopic LFP was reconstructed as the linear
-superposition of unitary field potentials (uLFP) generated by individual
-action potentials, enabling detailed spectral analysis (PSD) of the network's
-rhythmic activity under distinct contextual modulations.
-
-%==========================================================================
-% TODO: DETALLES DEL CÁLCULO DEL LFP Y ANÁLISIS ESPECTRAL
-%==========================================================================
-% [AQUÍ FALTA: Dar más detalles sobre el método de LFP. Los revisores de
-% NeurIPS valoran la reproducibilidad. Debes cubrir:
-%   - Referencia al método de Telenczuk o similar
-%   - Ventana temporal y solapamiento para la PSD
-%   - Método de estimación espectral (Welch, multitaper, etc.)
-%
-``Specifically, each spike at position $\mathbf{r}_i$ and time $t_k$
-contributes a unitary field potential of the form
-$\phi(\mathbf{r}, t) = K(|\mathbf{r} - \mathbf{r}_i|) \cdot h(t - t_k)$,
-where $K(\cdot)$ is a spatial kernel modeling the extracellular decay and
-$h(\cdot)$ is a temporal waveform representing the postsynaptic potential
-\citep{Telenczuk2020}. Power spectral density (PSD) was estimated using
-Welch's method with 500 ms Hamming windows and 50\% overlap. Gamma-band
-power was quantified as the integrated PSD in the 30--100 Hz range.''
+Network dynamics and mean firing rates were evaluated using peri-stimulus time histograms (PSTH). To connect the spiking network model to macroscopic electrophysiological biomarkers --- such as gamma-band oscillations and excitation/inhibition (E/I) balance alterations --- we simulated the Local Field Potential (LFP) using a spatiotemporal kernel-based approximation. In this framework, the macroscopic LFP was reconstructed as the linear superposition of unitary field potentials (uLFP) generated by individual action potentials, enabling detailed spectral analysis (PSD) of the network's rhythmic activity under distinct contextual modulations.
 
 %==========================================================================
 % TODO: COMPLEJIDAD COMPUTACIONAL Y RECURSOS
@@ -245,9 +136,4 @@ power was quantified as the integrated PSD in the 30--100 Hz range.''
 % [AQUÍ FALTA: Una frase o dos sobre los recursos computacionales usados.
 % En NeurIPS esto es cada vez más esperado.
 %
-``All simulations were executed on a high-performance computing cluster
-using [X] nodes with [Y] cores and [Z] GB of RAM. A typical simulation of
-5 seconds of biological time for Configuration~3, comprising approximately
-[N] neurons and [M] synapses, required roughly [T] hours of wall-clock time.
-The code to reproduce all simulations and analyses will be released upon
-publication.''
+``All simulations were executed on a high-performance computing cluster using [X] nodes with [Y] cores and [Z] GB of RAM. A typical simulation of 5 seconds of biological time for Configuration~3, comprising approximately [N] neurons and [M] synapses, required roughly [T] hours of wall-clock time. The code to reproduce all simulations and analyses will be released upon publication.''

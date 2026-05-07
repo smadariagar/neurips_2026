@@ -1,0 +1,54 @@
+
+\newif\ifcomments
+% Set the following variable to change between clean version and commented one.
+\commentstrue
+%\commentsfalse
+
+
+% \newcommand{\plagia}[1]{\textcolor{red}{\sout{#1}}}
+\ifcomments
+%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\cut}[1]{}
+\newcommand{\maybecut}[1]{\textcolor{orange}{#1}}
+\newcommand{\debating}[1]{\textcolor{red}{#1}}
+\newcommand{\added}[1]{\textcolor{blue}{#1}}
+\newcommand{\donepromised}[1]{{}}
+\newcommand{\toresolve}[1]{\textcolor{red}{#1}}
+\newcommand{\remove}[1]{\textcolor{green}{#1}}
+\newcommand{\removehide}[1]{}
+
+\newcommand{\commentsm}[1]{\textcolor{magenta}{({\bf SM:} #1)}}
+\newcommand{\commentcd}[1]{{\color{blue}({\bf CD:} #1)}}
+\newcommand{\commentpm}[1]{{\color{cyan}({\bf PM:} #1)}}
+
+\newcommand{\todo}[1]{\textcolor{cyan}{({\bf TODO:} #1)}}
+\newcommand{\old}[1]{\textcolor{red}{\sout{#1}}}
+% \newcommand{\new}[1]{\textcolor{BrickRed}{\uline{#1}}}
+\else
+%%%%%%%%%COMMENTS NOT VISIBLE%%%
+    \newcommand{\commentsm}[1]{}
+    \newcommand{\commentrti}[1]{}
+    \newcommand{\commentpv}[1]{}
+    \newcommand{\commental}[1]{}
+    \newcommand{\maybecut}[1]{}
+    \newcommand{\debating}[1]{}
+    \newcommand{\added}[1]{\textcolor{red}{#1}}
+    \newcommand{\donepromised}[1]{}
+    \newcommand{\toresolve}[1]{}
+    \newcommand{\remove}[1]{}
+    \newcommand{\removehide}[1]{}
+    \newcommand{\alt}[1]{}
+    \newcommand{\todo}{}
+    \newcommand{\old}[1]{}
+    \newcommand{\new}[1]{}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\fi
+
+
+% "revisit" is intended for things we need to check later. It can be used, for example to highlight things we're not sure we really ended up doing (so may wish to remove or de-emphasize).
+\newcommand{\revisit}[1]{\textcolor{orange}{#1}}
+\newcommand{\authorresponse}[1]{\textcolor{blue}{#1}}
+
