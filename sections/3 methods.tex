@@ -38,7 +38,7 @@ where $w$ is the synaptic weight and $\tau_{\text{syn}}$ is the synaptic time co
 %==========================================================================
 \textbf{3.2 Laminar Microcircuit Architecture.} Each V1 module represents a $1$ mm$^2$ patch of cortical tissue, based on the full-scale canonical microcircuit model proposed by \citet{Potjans2014}. It comprises approximately $77{,}000$ neurons distributed across four laminar layers: L2/3, L4, L5, and L6. Within each layer, the network maintains a physiological ratio of excitatory to inhibitory neurons of approximately 80/20. Local recurrent connectivity follows empirically derived connection probabilities.
 
-To capture intra-areal spatial integration, long-range horizontal projections within V1 are incorporated. These lateral connections are restricted to the superficial L2/3 layer and are functionally segregated by distance. Nearby connections link functionally similar adjacent columns with both excitatory and inhibitory synapses, with transmission delays of $d_{\text{n.lat}} = 5 \pm 1.5$ ms. Distant connections, in contrast, link columns with disparate orientation preferences and operate via a predominantly suppressive mechanism through disynaptic inhibition, with a slower conduction delay of $d_{\text{d.lat}} = 8 \pm 2.5$ ms \textbf{(see Figure~\ref{fig:architectures}A)}.
+To capture intra-areal spatial integration, long-range horizontal projections within V1 are incorporated. These lateral connections are restricted to the superficial L2/3 layer and are functionally segregated by distance. Nearby connections link functionally similar adjacent columns with both excitatory and inhibitory synapses, with transmission delays of $d_{\text{n.lat}} = 5 \pm 1.5$ ms. Distant connections, in contrast, link columns with disparate orientation preferences and operate via a predominantly suppressive mechanism through disynaptic inhibition, with a slower conduction delay of $d_{\text{d.lat}} = 8 \pm 2.5$ ms \textbf{(see Figure~\ref{fig:protocol} (Top))}.
 
 %==========================================================================
 % TODO: TABLA DE CONEXIONES O FIGURA DEL MICROCIRCUITO
@@ -48,11 +48,11 @@ To capture intra-areal spatial integration, long-range horizontal projections wi
 % Potjans & Diesmann, al menos menciona que usas las mismas probabilidades y
 % remite a una tabla en el apéndice.
 %
-\commentcd{Aca se habla del apéndice }The complete connection probability matrix between the eight neuronal populations (four layers $\times$ two types) follows the values reported by \citet{Potjans2014} and is provided in Table~\ref{tab:connectivity} of the Appendix.
+The complete connection probability matrix between the eight neuronal populations (four layers $\times$ two types) follows the values reported by \citet{Potjans2014} and is provided in Table~\ref{tab:connectivity} of the Appendix.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=\textwidth]{img/architectures.pdf}
+    \includegraphics[width=0.8\textwidth]{img/architectures.pdf}
     \caption{\textbf{Canonical Microcircuit and Hierarchical Architecture.} (Left) Local and intra-areal connectivity of the V1 microcircuit, detailing the specific interlaminar excitatory (E) and inhibitory (I) projections. (Right) Inter-areal feedforward and feedback connectivity between V1 and V2, along with near and distant lateral connections within V1.}
     \label{fig:architectures}
 \end{figure}
@@ -60,7 +60,7 @@ To capture intra-areal spatial integration, long-range horizontal projections wi
 %==========================================================================
 % \subsection{Hierarchical Integration and Competitive Dynamics}
 %==========================================================================
-\textbf{3.3 Hierarchical Integration and Competitive Dynamics.} To investigate the mechanistic origins of eCRF effects, the baseline architecture was extended to include a higher-order visual area (V2). The V2 module mirrors the cytoarchitectural variations in laminar thickness and neuronal densities reported for the macaque V2 region. Inter-areal communication is mediated by topographic projections with fast transmission delays of $2 \pm 0.5$ ms. Feedforward pathways originate from the superficial layers L2/3 of V1 and terminate predominantly in L4 and L6 of V2. Feedback projections originate from the deep layers L5 and L6 of V2 and target the superficial L2/3 and infragranular L5 of V1, anatomically avoiding L4 to provide modulatory rather than driving input \textbf{(see Figure~\ref{fig:architectures}B)}.
+\textbf{3.3 Hierarchical Integration and Competitive Dynamics.} To investigate the mechanistic origins of eCRF effects, the baseline architecture was extended to include a higher-order visual area (V2). The V2 module mirrors the cytoarchitectural variations in laminar thickness and neuronal densities reported for the macaque V2 region. Inter-areal communication is mediated by topographic projections with fast transmission delays of $2 \pm 0.5$ ms. Feedforward pathways originate from the superficial layers L2/3 of V1 and terminate predominantly in L4 and L6 of V2. Feedback projections originate from the deep layers L5 and L6 of V2 and target the superficial L2/3 and infragranular L5 of V1, anatomically avoiding L4 to provide modulatory rather than driving input \textbf{(see Figure~\ref{fig:architectures} (Right))}.
 
 To test the hypothesis that eCRF phenomena emerge from inter-areal interactions rather than purely local filtering, we embedded a lateral competition mechanism within the V2 module. This architecture comprises two spatially distinct, feature-aligned V2 modules that engage in competition via strong, reciprocal inhibitory connections. This hierarchical winner-take-all dynamic non-linearly refines the top-down feedback signals before they modulate V1 activity, overcoming the limitations of linear feedback models and enabling the robust, stimulus-specific surround suppression observed in physiological recordings.
 
@@ -100,11 +100,3 @@ where $R_{\text{center}}$ is the mean firing rate of the central column during c
 % \subsection{Data Analysis and Local Field Potentials}
 %==========================================================================
 \textbf{3.5 Data Analysis.} Network dynamics and mean firing rates were evaluated using peri-stimulus time histograms (PSTH). To connect the spiking network model to macroscopic electrophysiological biomarkers, including gamma-band oscillations and excitation/inhibition balance alterations, we simulated the local field potential (LFP) using a spatiotemporal kernel-based approximation. In this framework, the LFP was reconstructed as the linear superposition of unitary field potentials generated by individual action potentials, enabling spectral analysis of the network rhythmic activity under distinct contextual modulations.
-
-%==========================================================================
-% TODO: COMPLEJIDAD COMPUTACIONAL Y RECURSOS
-%==========================================================================
-% [AQUÍ FALTA: Una frase o dos sobre los recursos computacionales usados.
-% En NeurIPS esto es cada vez más esperado.
-%
-All simulations were executed on a high-performance computing cluster using [X] nodes with [Y] cores and [Z] GB of RAM. A typical simulation of $5$ seconds of biological time for Configuration~3, comprising approximately [N] neurons and [M] synapses, required roughly [T] hours of wall-clock time. The code to reproduce all simulations and analyses will be released upon publication.
